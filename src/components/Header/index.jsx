@@ -3,7 +3,7 @@ import Logo from "../../assets/img/Logo.png";
 
 import "./header.css";
 
-import ButtonLink from "../ButtonLink";
+import Button from "../Button";
 
 const Header = () => (
   <nav className="Menu">
@@ -11,9 +11,9 @@ const Header = () => (
       <img className="Logo" src={Logo} alt="Logo 'Gustavoflix'" />
     </a>
 
-    <ButtonLink className="ButtonLink" href="/">
+    <Button as="a" className="ButtonLink" href="/">
       Novo Vídeo
-    </ButtonLink>
+    </Button>
   </nav>
 );
 
