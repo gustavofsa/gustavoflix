@@ -33,7 +33,7 @@ ContentAreaContainer.Category = styled.h1`
   display: flex;
   align-items: center;
   text-align: center;
-  display: inline-block; 
+  display: inline-block;
   padding: 25px;
   line-height: 1;
   border-radius: 4px;
@@ -68,10 +68,11 @@ ContentAreaContainer.Title = styled.h2`
 export const BannerMainContainer = styled.section`
   height: 80vh;
   position: relative;
-  color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  color: var(--white);
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
+
   @media (max-width: 800px) {
     height: auto;
     min-height: 50vh;
@@ -112,10 +113,10 @@ export const WatchButton = styled.button`
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid transparent;
-  color: var(--black);
-  background: var(--white);
-  border-color: var(--black);
+  border: 2px solid transparent;
+  color: var(--white);
+  background: rgba(0, 0, 0, .2);
+  border-color: var(--white);
   transition: opacity .3s;
   display: none;
   margin: 0 auto;

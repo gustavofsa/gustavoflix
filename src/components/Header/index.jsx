@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "../../assets/img/logo.png";
 
-// import "./header.css";
+import { LogoImage, HeaderWrapper } from "./styles";
 
-import { LogoImage, ButtonLink, HeaderWrapper } from "./styles";
+import Button from "./components/ButtonLink";
 
 const Header = () => (
   <HeaderWrapper className="Menu">
@@ -11,9 +11,9 @@ const Header = () => (
       <LogoImage className="Logo" src={Logo} alt="Logo 'Gustavoflix'" />
     </a>
 
-    <ButtonLink as="a" className="ButtonLink" href="/">
+    <Button as="a" className="ButtonLink" href="/">
       Novo Vídeo
-    </ButtonLink>
+    </Button>
   </HeaderWrapper>
 );
 
