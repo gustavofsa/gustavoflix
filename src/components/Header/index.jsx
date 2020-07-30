@@ -1,17 +1,18 @@
 import React from "react";
-import Logo from "../../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
+import Logo from "../../assets/img/logo.png";
 import { LogoImage, HeaderWrapper } from "./styles";
 
 import Button from "./components/ButtonLink";
 
 const Header = () => (
   <HeaderWrapper className="Menu">
-    <a href="/">
+    <Link to="/">
       <LogoImage className="Logo" src={Logo} alt="Logo 'Gustavoflix'" />
-    </a>
+    </Link>
 
-    <Button as="a" className="ButtonLink" href="/">
+    <Button as={Link} className="ButtonLink" to="/register/video">
       Novo Vídeo
     </Button>
   </HeaderWrapper>
