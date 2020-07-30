@@ -1,20 +1,20 @@
 import React from "react";
 import Logo from "../../assets/img/logo.png";
 
-import "./header.css";
+// import "./header.css";
 
-import Button from "../Button";
+import { LogoImage, ButtonLink, HeaderWrapper } from "./styles";
 
 const Header = () => (
-  <nav className="Menu">
+  <HeaderWrapper className="Menu">
     <a href="/">
-      <img className="Logo" src={Logo} alt="Logo 'Gustavoflix'" />
+      <LogoImage className="Logo" src={Logo} alt="Logo 'Gustavoflix'" />
     </a>
 
-    <Button as="a" className="ButtonLink" href="/">
+    <ButtonLink as="a" className="ButtonLink" href="/">
       Novo Vídeo
-    </Button>
-  </nav>
+    </ButtonLink>
+  </HeaderWrapper>
 );
 
 export default Header;
