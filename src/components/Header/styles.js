@@ -10,7 +10,7 @@ export const LogoImage = styled.img`
 
 export const HeaderWrapper = styled.nav`
   width: 100%;
-  height: 80px;
+  height: 94px;
 
   position: fixed;
   top: 0;

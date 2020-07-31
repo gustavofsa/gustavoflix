@@ -6,6 +6,8 @@ import { LogoImage, HeaderWrapper } from "./styles";
 
 import Button from "./components/ButtonLink";
 
+import "./body.css";
+
 const Header = () => (
   <HeaderWrapper className="Menu">
     <Link to="/">
