@@ -1,22 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import PageDefault from '../../components/PageDefault';
 import { Link } from 'react-router-dom';
 
+
 function RegisterCategory() {
+
+  const [categorys, setCategorys] = useState(['Teste']);
+  const [categoryName, setCategoryName] = useState('Filmes');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setCategorys([...categorys, categoryName]);
+  }
+
   return (
     <PageDefault>
-      <h1>Cadastro de Categoria</h1>
+      <h1>Cadastro de Categoria: {categoryName}</h1>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Nome da Categoria:
-          <input type="text" />
+          <input
+            type="text"
+            value={categoryName}
+            onChange={(infosDoEvento) => {
+              setCategoryName(infosDoEvento.target.value);
+            }}
+          />
         </label>
 
-        <button>
+        <button >
           Cadastrar
         </button>
       </form>
+
+      <ul>
+        {categorys.map((category) => <li key={category}>{category}</li>)}
+      </ul>
 
       <Link to="">
         Ir para home
